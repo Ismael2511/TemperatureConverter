@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+}
+.container-off{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1800px;
+    position: relative;
+}
+/**typography */
+.clr-yellow{
+    color: var(--yellow);
+    font-weight: 500;
+    text-decoration: line-through;
+}
+/*---Variables---*/
+:root{
+    --font-50: 50px;
+    --font-24:24px;
+    --font-30:30px;
+    --font-16:16px;
+    --white:#fff;
+    --blue: rgb(14, 14, 37);
+    --gradient-blue:linear-gradient(140deg,rgba(14, 14, 37, 0.274),rgba(206, 206, 206, 0.295));
+    --yellow:#CDA716;
+    --darkRed:#260503;
+}
+
+/*-------------------*/
+.logo{
+    position: absolute;
+    left: 20px;
+}
+/**------------------ */
+nav {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    background: rgb(31, 31, 31);
+    padding: 2rem 0;
+    z-index: 99;
+    left: -250px;
+    transition: .8s ease;
+}
+
+nav h2{
+    text-align: center;
+    letter-spacing: 2px;
+    color: white;
+    text-decoration:underline;
+}
+nav ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+nav li {
+    line-height: 50px;
+    border-bottom: 1px solid rgb(77, 77, 77);;
+}
+nav ul li a {
+    width: 100%;
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    padding-left: 1rem;
+    display: block;
+    letter-spacing: 1px;
+    border-left: 3px solid transparent;
+    text-decoration: none;
+    position: relative;
+    transition: 250ms ease-in-out;
+}
+nav ul li a.active{
+    color: var(--yellow);
+}
+nav ul li a:hover{
+    border-left-color:var(--yellow);
+    color: var(--yellow);
+    background: rgb(34, 34, 34);
+}
+nav ul ul{
+    position: static;
+    display: none;
+    background: rgb(27, 27, 27);
+}
+nav ul ul li {
+    border-bottom: none;
+    padding: 0 1rem;
+}
+nav ul ul li a{
+    font-size: 18px;
+}
+nav ul li a span{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 250ms linear;
+
+}
+nav ul li a span.rotate{
+    transform: translateY(-50%) rotate(180deg);
+}
+.nav-scroll{
+    position: fixed;
+    background: red;
+}
+.nav-bar{
+    position: relative;
+    background:red;
+}
+.show{
+    display: block;
+}
+
+/*------LOGO-----------*/
+.logo{
+    position: absolute;
+    left: 20px;
+    border: 1px solid rgba(238, 238, 238, 0.89);
+    top: 20px;
+    z-index: 1;
+
+}
+.logo a{
+    font-family: 'Permanent Marker', cursive;
+    color: rgba(238, 238, 238, 0.89);
+    font-weight: 100;
+    padding: .5rem 1rem;
+    text-decoration: none;
+}
+/**--HAMBURGER--------------------- **/
+.hamburger{
+    position: absolute;
+    background:var(--blue);
+    right: 20px;
+    top: 20px;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+    z-index: 99;
+    transition: 250ms ease-in;
+    box-shadow: .3rem .3rem 1.5rem rgba(0, 0, 48, 0.26),
+                -.3rem -.3rem 1.5rem rgba(6, 0, 56, 0.226)
+                ;
+    transform-origin: right;
+}
+
+.hamburger:hover{
+    background: rgb(11, 11, 92);
+}
+.hamburger.open{
+    background: rgb(11, 11, 92);
+}
+.bars{
+    width: 1.8rem;
+    height: 2px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+    transition: all 1s;
+}
+.bars::before,
+.bars::after{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: inherit;
+    background: white;
+    right: 0;
+    display: block;
+    transition: all 1s;
+}
+.hamburger:hover 
+    .bars::before{
+        width: inherit;
+        transition-delay: .3s;
+    }
+.hamburger:hover
+        .bars::after{
+    width: inherit;
+}
+.bars::before{
+    top: -.7rem;
+}
+.bars::after{
+    top: .7rem;
+}
+/**JS CLICK HAMBURGUER */
+.open.bars{
+    background-color: transparent;
+}
+.open.bars::after{
+    top: 0;
+    width: inherit;
+    transform: rotate(135deg);
+}
+.open.bars::before{
+    top: 0;
+    width: inherit;
+    transform: rotate(-135deg);
+}
+/**MENU APPEAREANCE */
+.click{
+    transform: translateX(-260px);
+}
+
+.showMenu{
+    left: 0;
+}
+/**-------PARALLAX PICTURE----------- */
+.pllx-pic{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;  
+    overflow: hidden;
+    position: relative;
+}
+.pllx-pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: -1;
+}
+.hero-clipped{
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+    background: rgba(238, 238, 238, 0.89);
+    position: absolute;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transform-origin: right;
+    width: 60%;
+    height: inherit;
+    top: 0;
+    right: 0; 
+    
+}
+.pllx-pic h2{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 45px;
+    color: rgb(68, 68, 68);
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.pllx-pic h2::first-letter{
+    font-size: 50px;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:var(--gradient-blue);
+    left: 0;
+    top: 0;
+}
+/**BUTTON */
+.btn{
+    position: absolute;
+    border: 2px solid rgb(114, 114, 114);
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+    padding:1rem 2rem;
+    font-size: 18px;
+    color: rgb(114, 114, 114);
+    /*border-radius: 40px 0px 40px;*/
+    text-decoration:none;
+    background: none;
+    transition:all 250ms ease;
+}
+.btn:hover{
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+}
+/*.btn::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--blue);
+    color: white;
+    top:0;
+    left: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 250ms linear;
+}
+.btn:hover::before{
+    color: white;
+    transform: scaleX(1);
+    transform-origin: right;
+}*/
+.contain{
+    margin: 2rem 0;
+    text-align: justify;
+    line-height: 40px;
+}
+
+
+
+
+
+
+
+/*
+.parallax-2 {
+    background: url(img/mountain.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+*/
+

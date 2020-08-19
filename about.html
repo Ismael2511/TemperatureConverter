@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="about.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/62c33c61b0.js"></script>   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">   
+    <title>About Parallax</title>
+</head>
+<body class="page">
+    <section class="nav-bar">
+    <div class="container-off">
+        <span class="hamburger">
+            <span class="bars"></span>
+        </span>
+        <span class="logo">
+           <h2><a href="parallax.html">TopMountain</a></h2>
+        </span>
+    </div>
+</section>
+
+    <nav class="menu">
+        <h2>Titulo</h2>
+        <ul>
+            <li><a href="parallax.html">Home</a></li>
+            <li><a href="#" class="about-btn">About<span class="fas fa-sort-down rotate_about"></span></a>
+                <ul class="about-show">
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="work-btn">Work<span class="fas fa-sort-down rotate_work"></span></a>
+            <ul class="work-show">
+                <li><a href="#">PDV</a></li>
+                <li><a href="#">POS</a></li>
+                <li><a href="#">HR</a></li>
+                <li><a href="#">FT</a></li>
+            </ul>
+            </li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="pllx-pic">
+        <div class="overlay"></div>
+        <div class="hero-clipped">
+            <h2>El Cielo <br>es nuestro único <span class="clr-yellow"><br>Límite</span></h2>
+            <a href="#" class="btn">¡Escala ya!</a>
+        </div>
+        <img src="img/mountain.jpg" alt="header-pic" class="parallax">
+    
+    </section>
+
+    <!--SECTION NO STYLIZED-->
+    <section class="main-conversion">
+        <div class="container">
+            <div class="big-text">Conversions Of Grades</div>
+            <div class="conversion">
+                <label>Celcius To Farenheit</label>
+                <input type="text" placeholder="Celcius" id="i-cel">
+                <button class="btn-submit" id="b-cel">Convertir</button>
+                <label id="i-celR"></label>
+            </div>
+            <div class="conversion">
+                <label>Farenheit To Celcius</label>
+                <input type="text" placeholder="Celcius" id="i-far">
+                <button class="btn-submit" id="b-far">Convertir</button>
+               <label id="i-farR"></label>
+            </div>
+            <div class="conversion">
+                <label>Kelvin To Farenheit</label>
+                <input type="text" placeholder="Celcius" id="i-kel">
+                <button class="btn-submit" id="b-kel">Convertir</button>
+                <label id="i-kelR"></label>
+            </div>
+            <select id="selector">
+                <option>Select</option>
+                <option value="ºC - ºF">ºC - ºF</option>
+                <option value="ºF - ºC">ºF - ºC</option>
+                <option value="ºK - ºF">ºK - ºF</option>
+    
+            </select>
+        </div>
+        
+    </section>
+
+  <section class="contain">
+      <div class="container">
+      <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum culpa molestias soluta, nemo nobis nihil
+          voluptatibus molestiae? Totam laboriosam id harum modi ipsum animi ut debitis incidunt, excepturi, iste quasi!
+          Cum architecto expedita deserunt repudiandae alias ex adipisci ipsa impedit, rem non atque culpa quae,
+          eligendi autem possimus nobis minus mollitia laudantium, omnis fugit et eum. Cumque dolores voluptates amet!
+          Necessitatibus temporibus doloribus mollitia illo eligendi quibusdam, sequi quis hic ratione neque reiciendis
+          excepturi, nobis veniam amet vero earum perferendis aliquam tenetur? Deleniti doloremque dicta corporis fugiat
+          optio tempore reiciendis!
+          Architecto maiores consectetur veniam velit, ducimus praesentium tenetur quisquam, eos odio, deleniti
+          voluptates exercitationem. Id quas neque, commodi ullam excepturi error debitis architecto eius corrupti alias
+          reprehenderit aliquid, ipsam exercitationem?
+          Fugiat atque minima vel cumque, numquam odio, iure voluptas magnam corrupti alias expedita cum quaerat.
+          Dolorem veritatis ducimus beatae quibusdam neque eum harum! Ex dolores, animi enim aperiam nisi a.</h2>
+<br>
+      
+        </div>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+    <script src="about.js"></script>
+    <script src="conversion.js"></script>
+</body>
+</html>
